@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React</title>
+  </head>
+  <body>
+    <button>Button clicked</button>
+  </body>
+  <script>
+    class React {
+      constructor() {
+        this.library = "React";
+        this.server = "http://localhost:8080";
+
+        // requirement
+        document
+          .querySelector("button")
+          .addEventListener("click", this.handleClick.bind(this));
+      }
+
+      handleClick() {
+        this.newServer = "http://localhost:8080";
+        this.AgainNewServer = function hello(name, username, email) {
+          return true;
+        };
+        console.log("button clicked");
+        console.log(this);
+        console.log(this.AgainNewServer.length);
+        this.AgainNewServer.prototype.logMe = function () {
+          console.log("hello am i logged");
+        };
+
+        const instance = new this.AgainNewServer();
+        instance.logMe();
+      }
+    }
+
+    const app = new React();
+  </script>
+</html>
